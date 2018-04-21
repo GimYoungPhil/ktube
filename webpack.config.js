@@ -13,6 +13,12 @@ module.exports = {
     filename: 'js/[name].[chunkhash].js',
   },
 
+  resolve : {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
+  },
+
   module: {
     rules: [
       {
@@ -52,8 +58,6 @@ module.exports = {
       filename: 'css/[name].[md5:contenthash:hex:20].css'
     }),
   ],
-
-  // devtool: 'source-map',
 
   optimization: {
     splitChunks: {

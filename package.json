@@ -6,7 +6,7 @@
   "author": "GimYoungPhil <youngphil.gim@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack-dev-server --mode=development --progress",
+    "serve": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   },
   "dependencies": {
