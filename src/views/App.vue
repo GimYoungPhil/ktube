@@ -1,6 +1,6 @@
 <template>
-  <div>
-    App
+  <div class="app">
+    App Hi Hello !!
   </div>
 </template>
 
@@ -9,3 +9,9 @@ export default {
   name: 'App',
 }
 </script>
+
+<style>
+.app {
+  color: hotpink;
+}
+</style>
