@@ -1,6 +1,8 @@
 <template>
-  <div>
-    Foo
+  <div class="row">
+    <div class="col">
+      Foo
+    </div>
   </div>
 </template>
 
