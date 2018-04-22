@@ -10,6 +10,10 @@
     "build": "webpack --mode=production"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.10",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
+    "@fortawesome/vue-fontawesome": "^0.0.22",
     "axios": "^0.18.0",
     "bootswatch": "^4.0.0",
     "vue": "^2.5.16",
