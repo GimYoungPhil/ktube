@@ -74,7 +74,7 @@ module.exports = {
   devServer: {
     open: true,
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': 'https://api.ktube.xyz'
     },
     host: '0.0.0.0',
     contentBase: path.resolve(__dirname, 'dist'),
