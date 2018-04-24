@@ -1,32 +1,49 @@
 import API from '@/api'
 import {
+  UPDATE_NEWEST_PAGE,
+  UPDATE_NEWEST_CATEGORY,
   REQUEST_NEWEST_VIDEOS,
   RECEIVE_NEWEST_VIDEOS,
 } from '@/store/mutation-types'
 
 const state = {
-  list: {},
-  detail: {},
+  category: 'daily',
+  page: 1,
+  // list: {},
+  // detail: {},
+  daily: {
+    1: [],
+  },
+  weekly: {},
+  monthly: {},
 }
 
-const getters = {}
+const getters = {
+  currentBestVides: state => {
+    return state[state.category][state.page]
+  },
+}
 
 const mutations = {
-  [REQUEST_NEWEST_VIDEOS] (state) {
-    state.list = {}
-    state.detail = {}
+  [UPDATE_NEWEST_PAGE] (state, { page }) {
+    state.page = page
   },
-  [RECEIVE_NEWEST_VIDEOS] (state, { idolKey, idol }) {
-    state.list[idolKey] = idol
-    state.detail = idol
+  [UPDATE_NEWEST_CATEGORY] (state, { category }) {
+    state.category = category
+  },
+  [REQUEST_NEWEST_VIDEOS] (state) {
+  },
+  [RECEIVE_NEWEST_VIDEOS] (state, { videos, category, page }) {
+    state[category][page] = videos.contents
   },
 }
 
 const actions = {
-  fetchNewestVideos ({ commit }, idolKey) {
+  fetchBestVideos ({ commit, state }) {
+    const { category, page } = state
     commit(REQUEST_NEWEST_VIDEOS)
-    API.getIdolDetail({ idolKey })
-      .then(idol => commit(RECEIVE_NEWEST_VIDEOS, { idolKey, idol }))
+    API.getBestVideos({ category, page })
+      .then(videos => commit(RECEIVE_NEWEST_VIDEOS, { videos, category, page }))
   },
 }
 

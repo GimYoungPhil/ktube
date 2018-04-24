@@ -5,11 +5,11 @@ import axios from 'axios'
 //   views: 'view',   // 조회수 많은순
 //   like: 'like'     // 좋아요 많은순
 // };
-// const Category = {
-//   daily: 'd',     // 일간베스트
-//   weekly: 'w',    // 주간베스트
-//   monthly: 'm',   // 월간베스트
-// }
+const CATEGORY = {
+  daily: 'd',     // 일간베스트
+  weekly: 'w',    // 주간베스트
+  monthly: 'm',   // 월간베스트
+}
 
 export default {
   getIdolList(lang = 'ja') {
@@ -44,6 +44,14 @@ export default {
     return axios({
       url: `/api/karaokes/${idolKey}`,
       params: { page, 'p[order]': order },
+    }).then(response => response.data)
+  },
+
+  // d, 7d, 30d
+  getBestVideos({ category = 'daily', page = 1 }) {
+    return axios({
+      url: `/api/bests/${CATEGORY[category]}`,
+      params: { page },
     }).then(response => response.data)
   },
 }
