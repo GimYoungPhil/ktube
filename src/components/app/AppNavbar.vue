@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand fixed-top navbar-dark bg-dark">
     <div class="container">
-      <router-link class="navbar-brand" to="/">
+      <router-link class="navbar-brand text-success" to="/">
         <font-awesome-icon :icon="icon" />
       </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
