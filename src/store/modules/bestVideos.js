@@ -5,17 +5,27 @@ import {
   REQUEST_NEWEST_VIDEOS,
   RECEIVE_NEWEST_VIDEOS,
 } from '@/store/mutation-types'
+import { parseVideos } from '@/util/parser'
 
 const state = {
   category: 'daily',
   page: 1,
-  // list: {},
-  // detail: {},
   daily: {
     1: [],
   },
   weekly: {},
   monthly: {},
+
+  // beginIndex: 0
+  // endPage: 5
+  // hasNext: true
+  // hasPrevious: false
+  // p: {}
+  // page: 1
+  // scale: 15
+  // startPage: 1
+  // total: 1021
+  // totalPages: 69
 }
 
 const getters = {
@@ -34,7 +44,7 @@ const mutations = {
   [REQUEST_NEWEST_VIDEOS] (state) {
   },
   [RECEIVE_NEWEST_VIDEOS] (state, { videos, category, page }) {
-    state[category][page] = videos.contents
+    state[category][page] = parseVideos(videos.contents)
   },
 }
 

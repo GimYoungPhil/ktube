@@ -18,8 +18,4 @@ export default {
 }
 </script>
 
-<style>
-.app {
-  color: hotpink;
-}
-</style>
+<style></style>

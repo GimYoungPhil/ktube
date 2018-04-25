@@ -6,7 +6,7 @@
         {{ video.displayDuration }}
       </span>
     </div>
-    <div class="card-body">
+    <div class="card-body p-2">
       <h5 class="card-title">{{ video.title }}</h5>
       <p class="card-text d-flex justify-content-between">
         <span>{{ video.displayCount }} views</span>
@@ -20,7 +20,7 @@
 import moment from 'moment'
 
 export default {
-  name: 'VideoListItem',
+  name: 'VideoListCard',
   props: {
     video: {
       type: Object,

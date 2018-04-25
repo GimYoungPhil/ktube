@@ -47,7 +47,7 @@ export default {
     }).then(response => response.data)
   },
 
-  // d, 7d, 30d
+  // api: 4
   getBestVideos({ category = 'daily', page = 1 }) {
     return axios({
       url: `/api/bests/${CATEGORY[category]}`,

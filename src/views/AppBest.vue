@@ -1,7 +1,7 @@
 <template>
-  <div>
-    Best
-    <VideoList/>
+  <div class="pt-3">
+    <h4>Best Vidoes</h4>
+    <VideoList :videos="currentBestVides"/>
   </div>
 </template>
 
