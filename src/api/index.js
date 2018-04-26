@@ -6,9 +6,9 @@ import axios from 'axios'
 //   like: 'like'     // 좋아요 많은순
 // };
 const CATEGORY = {
-  daily: 'd',     // 일간베스트
-  weekly: 'w',    // 주간베스트
-  monthly: 'm',   // 월간베스트
+  daily: 'd',
+  weekly: 'w',
+  monthly: 'm',
 }
 
 export default {
@@ -48,9 +48,15 @@ export default {
   },
 
   // api: 4
-  getBestVideos({ category = 'daily', page = 1 }) {
+  // getBestVideos({ category = 'daily', page = 1 }) {
+  //   return axios({
+  //     url: `/api/bests/${CATEGORY[category]}`,
+  //     params: { page },
+  //   }).then(response => response.data)
+  // },
+  getBestVideos({ page }) {
     return axios({
-      url: `/api/bests/${CATEGORY[category]}`,
+      url: '/api/bests/d',
       params: { page },
     }).then(response => response.data)
   },
