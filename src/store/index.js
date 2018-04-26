@@ -1,16 +1,26 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import newestVideos from './modules/newestVideos'
-import bestVideos from './modules/bestVideos'
-import fanCamVideos from './modules/fanCamVideos'
+import videoNewest from './modules/videoNewest'
+import videoBest from './modules/videoBest'
+import fanCamNewest from './modules/fanCamNewest'
+import fanCamBest from './modules/fanCamBest'
+import karaokeNewest from './modules/karaokeNewest'
+import karaokeBest from './modules/karaokeBest'
+import idolNewest from './modules/idolNewest'
+import idolBest from './modules/idolBest'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    newestVideos,
-    bestVideos,
-    fanCamVideos,
+    videoNewest,
+    videoBest,
+    fanCamNewest,
+    fanCamBest,
+    karaokeNewest,
+    karaokeBest,
+    idolNewest,
+    idolBest,
   },
   strict: process.env.NODE_ENV !== 'production',
 })
