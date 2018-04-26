@@ -5,7 +5,15 @@
         <VideoListCard :video="video"/>
       </div>
     </template>
-    <VideoListPagination/>
+    <VideoListPagination
+      v-if="pagination.hasOwnProperty('startPage')"
+      :startPage="pagination.startPage"
+      :endPage="pagination.endPage"
+      :hasPrevious="pagination.hasPrevious"
+      :hasNext="pagination.hasNext"
+      :page="pagination.page"
+      @selectPage="({page}) => $emit('selectPage', {page})"
+    />
   </div>
 </template>
 
@@ -22,6 +30,10 @@ export default {
   props: {
     videos: {
       type: Array,
+      required: true,
+    },
+    pagination: {
+      type: Object,
       required: true,
     },
   },
