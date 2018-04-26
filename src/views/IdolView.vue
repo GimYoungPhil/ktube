@@ -1,12 +1,12 @@
 <template>
   <div>
-    Home
+    IdolView
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppHome',
+  name: 'IdolView',
 }
 </script>
 

@@ -12,13 +12,13 @@
           <li class="nav-item" :class="{ active: $route.path === '/'}">
             <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
           </li>
-          <li class="nav-item" :class="{ active: $route.path === '/best'}">
-            <router-link class="nav-link" to="/best">Best</router-link>
-          </li>
           <li class="nav-item" :class="{ active: $route.path === '/fanCam'}">
             <router-link class="nav-link" to="fanCam">FanCam</router-link>
           </li>
-          <li class="nav-item" :class="{ active: $route.path === '/idols'}">
+          <li class="nav-item" :class="{ active: $route.path === '/karaoke'}">
+            <router-link class="nav-link" to="karaoke">Karaoke</router-link>
+          </li>
+          <li class="nav-item" :class="{ active: $route.path === '/idol'}">
             <router-link class="nav-link" to="idols">Idols</router-link>
           </li>
         </ul>

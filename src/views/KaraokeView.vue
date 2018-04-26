@@ -1,12 +1,12 @@
 <template>
   <div>
-    FanCam
+    KaraokeView
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppFanCam',
+  name: 'KaraokeView',
 }
 </script>
 

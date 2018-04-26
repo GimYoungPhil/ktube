@@ -10,7 +10,7 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 import VideoList from '@/components/VideoList.vue'
 
 export default {
-  name: 'AppBest',
+  name: 'BestView',
   components: {
     VideoList,
   },

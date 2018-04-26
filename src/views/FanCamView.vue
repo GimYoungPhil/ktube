@@ -1,12 +1,12 @@
 <template>
-  <div class="row">
-    Bar
+  <div>
+    FanCamView
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'FanCamView',
 }
 </script>
 
