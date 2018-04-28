@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="Page navigation example">
+  <nav aria-label="navigation" class="d-flex justify-content-center my-3">
     <ul class="pagination">
       <li class="page-item" :class="{ 'disabled': !hasPrevious }">
         <span
@@ -65,5 +65,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

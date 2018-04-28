@@ -1,19 +1,27 @@
 <template>
-  <div class="card border-0 rounded-0">
-    <div class="position-relative">
-      <img class="card-img-top" :src="video.thumbnailMedium" alt="Card image cap">
-      <span class="badge badge-dark position-absolute">
-        {{ video.displayDuration }}
-      </span>
+  <router-link
+    :to="{
+      name: 'watch',
+      params: { videoKey: video.videoKey },
+      query: { type: queryType }
+    }"
+  >
+    <div class="card border-0 rounded-0">
+      <div class="position-relative">
+        <img class="card-img-top" :src="video.thumbnailMedium" alt="Card image cap">
+        <span class="badge badge-dark position-absolute">
+          {{ video.displayDuration }}
+        </span>
+      </div>
+      <div class="card-body p-2">
+        <h5 class="card-title">{{ video.title }}</h5>
+        <p class="card-text d-flex justify-content-between">
+          <span>{{ video.displayViewCount }} views</span>
+          <span>{{ video.displayDate }}</span>
+        </p>
+      </div>
     </div>
-    <div class="card-body p-2">
-      <h5 class="card-title">{{ video.title }}</h5>
-      <p class="card-text d-flex justify-content-between">
-        <span>{{ video.displayCount }} views</span>
-        <span>{{ video.displayDate }}</span>
-      </p>
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -24,6 +32,10 @@ export default {
   props: {
     video: {
       type: Object,
+      required: true,
+    },
+    queryType: {
+      type: String,
       required: true,
     },
   },

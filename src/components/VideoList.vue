@@ -1,18 +1,21 @@
 <template>
-  <div class="row">
-    <template v-for="(video, index) in videos">
-      <div class="col-sm-6 my-3" :key="index">
-        <VideoListCard :video="video"/>
+  <div class="">
+    <transition-group name="list" tag="div" class="row">
+      <div
+        class="col-sm-6 col-md-4 col-lg-3 col-xxl-2 my-3 px-1"
+        v-for="(video, index) in collection"
+        :key="index"
+      >
+        <VideoListCard :video="video" :queryType="queryType"/>
       </div>
-    </template>
+    </transition-group>
     <VideoListPagination
-      v-if="pagination.hasOwnProperty('startPage')"
+      :page="pagination.page"
       :startPage="pagination.startPage"
       :endPage="pagination.endPage"
       :hasPrevious="pagination.hasPrevious"
       :hasNext="pagination.hasNext"
-      :page="pagination.page"
-      @selectPage="({page}) => $emit('selectPage', {page})"
+      @selectPage="({ page }) => $emit('selectPage', { page })"
     />
   </div>
 </template>
@@ -28,7 +31,7 @@ export default {
     VideoListPagination,
   },
   props: {
-    videos: {
+    collection: {
       type: Array,
       required: true,
     },
@@ -36,8 +39,19 @@ export default {
       type: Object,
       required: true,
     },
+    queryType: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
 
-<style></style>
+<style>
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+}
+</style>
