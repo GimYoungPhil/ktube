@@ -1,32 +1,18 @@
-export const NEXT_PAGE_VIDEO_NEWEWST = 'videoNewest/NEXT_PAGE_VIDEO_NEWEWST'
-export const PREV_PAGE_VIDEO_NEWEWST = 'videoNewest/PREV_PAGE_VIDEO_NEWEWST'
 export const REQUEST_VIDEO_NEWEWST = 'videoNewest/REQUEST_VIDEO_NEWEWST'
 export const RECEIVE_VIDEO_NEWEWST = 'videoNewest/RECEIVE_VIDEO_NEWEWST'
 
-export const NEXT_PAGE_VIDEO_BEST = 'videoBest/NEXT_PAGE_VIDEO_BEST'
-export const PREV_PAGE_VIDEO_BEST = 'videoBest/PREV_PAGE_VIDEO_BEST'
-
-export const SELECT_PAGE_VIDEO_BEST = 'videoBest/SELECT_PAGE_VIDEO_BEST'
 export const REQUEST_VIDEO_BEST = 'videoBest/REQUEST_VIDEO_BEST'
 export const RECEIVE_VIDEO_BEST = 'videoBest/RECEIVE_VIDEO_BEST'
 
-export const NEXT_PAGE_FANCAM_NEWEWST = 'fancamNewest/NEXT_PAGE_FANCAM_NEWEWST'
-export const PREV_PAGE_FANCAM_NEWEWST = 'fancamNewest/PREV_PAGE_FANCAM_NEWEWST'
 export const REQUEST_FANCAM_NEWEWST = 'fancamNewest/REQUEST_FANCAM_NEWEWST'
 export const RECEIVE_FANCAM_NEWEWST = 'fancamNewest/RECEIVE_FANCAM_NEWEWST'
 
-export const NEXT_PAGE_FANCAM_BEST = 'fancamBest/NEXT_PAGE_FANCAM_BEST'
-export const PREV_PAGE_FANCAM_BEST = 'fancamBest/PREV_PAGE_FANCAM_BEST'
 export const REQUEST_FANCAM_BEST = 'fancamBest/REQUEST_FANCAM_BEST'
 export const RECEIVE_FANCAM_BEST = 'fancamBest/RECEIVE_FANCAM_BEST'
 
-export const NEXT_PAGE_KARAOKE_NEWEWST = 'karaokeNewest/NEXT_PAGE_KARAOKE_NEWEWST'
-export const PREV_PAGE_KARAOKE_NEWEWST = 'karaokeNewest/PREV_PAGE_KARAOKE_NEWEWST'
 export const REQUEST_KARAOKE_NEWEWST = 'karaokeNewest/REQUEST_KARAOKE_NEWEWST'
 export const RECEIVE_KARAOKE_NEWEWST = 'karaokeNewest/RECEIVE_KARAOKE_NEWEWST'
 
-export const NEXT_PAGE_KARAOKE_BEST = 'karaokeBest/NEXT_PAGE_KARAOKE_BEST'
-export const PREV_PAGE_KARAOKE_BEST = 'karaokeBest/PREV_PAGE_KARAOKE_BEST'
 export const REQUEST_KARAOKE_BEST = 'karaokeBest/REQUEST_KARAOKE_BEST'
 export const RECEIVE_KARAOKE_BEST = 'karaokeBest/RECEIVE_KARAOKE_BEST'
 
@@ -39,21 +25,3 @@ export const NEXT_PAGE_IDOL_BEST = 'karaokeBest/NEXT_PAGE_IDOL_BEST'
 export const PREV_PAGE_IDOL_BEST = 'karaokeBest/PREV_PAGE_IDOL_BEST'
 export const REQUEST_IDOL_BEST = 'karaokeBest/REQUEST_IDOL_BEST'
 export const RECEIVE_IDOL_BEST = 'karaokeBest/RECEIVE_IDOL_BEST'
-
-// export const REQUEST_BEST_VIDEOS = 'best/REQUEST_BEST_VIDEOS'
-// export const RECEIVE_BEST_VIDEOS = 'best/RECEIVE_BEST_VIDEOS'
-
-// export const REQUEST_FANCAM_VIDEOS = 'fanCam/REQUEST_FANCAM_VIDEOS'
-// export const RECEIVE_FANCAM_VIDEOS = 'fanCam/RECEIVE_FANCAM_VIDEOS'
-
-// export const REQUEST_IDOLS = 'idolList/REQUEST_IDOLS'
-// export const RECEIVE_IDOLS = 'idolList/RECEIVE_IDOLS'
-
-// export const REQUEST_IDOL = 'idolDetail/REQUEST_IDOL'
-// export const RECEIVE_IDOL = 'idolDteail/RECEIVE_IDOL'
-
-// export const REQUEST_IDOL_VIDEOS = 'idolVideoList/REQUEST_IDOL_VIDEOS'
-// export const RECEIVE_IDOL_VIDEOS = 'idolVideoList/RECEIVE_IDOL_VIDEOS'
-
-// export const REQUEST_IDOL_KARAOKES = 'idolKaraokeList/REQUEST_IDOL_KARAOKES'
-// export const RECEIVE_IDOL_KARAOKES = 'idolKaraokeList/RECEIVE_IDOL_KARAOKES'
