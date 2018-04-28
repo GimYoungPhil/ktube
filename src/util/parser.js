@@ -37,7 +37,11 @@ export function parseVideos(videos) {
     }
 
     if (video.hasOwnProperty('rankViewCount')) {
-      video.displayCount = displayCount(video.rankViewCount)
+      video.displayRankViewCount = displayCount(video.rankViewCount)
+    }
+
+    if (video.hasOwnProperty('viewCount')) {
+      video.displayViewCount = displayCount(video.viewCount)
     }
 
     if (video.hasOwnProperty('publishedAt')) {
