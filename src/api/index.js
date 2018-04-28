@@ -47,17 +47,51 @@ export default {
     }).then(response => response.data)
   },
 
+  // api: 3
+  getNewestVideos({ page, scale = 12 }) {
+    return axios({
+      url: '/api/videos',
+      params: { page, scale, 'p[order]': 'time' },
+    }).then(response => response.data)
+  },
+
   // api: 4
-  // getBestVideos({ category = 'daily', page = 1 }) {
-  //   return axios({
-  //     url: `/api/bests/${CATEGORY[category]}`,
-  //     params: { page },
-  //   }).then(response => response.data)
-  // },
-  getBestVideos({ page }) {
+  getBestVideos({ page, scale = 12 }) {
     return axios({
       url: '/api/bests/d',
-      params: { page },
+      params: { page, scale },
+    }).then(response => response.data)
+  },
+
+  // api: 5
+  getNewestFanCams({ page, scale = 12 }) {
+    return axios({
+      url: '/api/fancams',
+      params: { page, scale, 'p[order]': 'time' },
+    }).then(response => response.data)
+  },
+
+  // api: 6
+  getBestFanCams({ page, scale = 12 }) {
+    return axios({
+      url: '/api/fbests/d',
+      params: { page, scale },
+    }).then(response => response.data)
+  },
+
+  // api: 9
+  getNewestKaraokes({ page, scale = 12 }) {
+    return axios({
+      url: '/api/karaokes',
+      params: { page, scale, 'p[order]': 'time' },
+    }).then(response => response.data)
+  },
+
+  // api: 10
+  getBestKaraokes({ page, scale = 12 }) {
+    return axios({
+      url: '/api/karabests/d',
+      params: { page, scale },
     }).then(response => response.data)
   },
 }
