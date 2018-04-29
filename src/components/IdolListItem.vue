@@ -4,13 +4,9 @@
       name: 'idolVideo',
       params: { idolKey: idol.idolKey }
     }"
+    class="badge badge-pill badge-primary m-2"
   >
-    <div class="card border-0 rounded-0">
-      <div class="card-img-top" :style="{ 'background-image': `url(${idol.thumbUrl})`}" />
-      <div class="card-body p-2">
-        <h5 class="card-title mb-0">{{ idol.name2 }}</h5>
-      </div>
-    </div>
+    <span class="h6">{{ idol.name2 }}</span>
   </router-link>
 </template>
 
@@ -25,13 +21,4 @@ export default {
   },
 }
 </script>
-
-<style>
-.card-img-top {
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
 

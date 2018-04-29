@@ -18,13 +18,3 @@ export const RECEIVE_KARAOKE_BEST = 'karaokeBest/RECEIVE_KARAOKE_BEST'
 
 export const REQUEST_IDOL_LIST = 'idolList/REQUEST_IDOL_LIST'
 export const RECEIVE_IDOL_LIST = 'idolList/RECEIVE_IDOL_LIST'
-
-export const NEXT_PAGE_IDOL_NEWEWST = 'karaokeNewest/NEXT_PAGE_IDOL_NEWEWST'
-export const PREV_PAGE_IDOL_NEWEWST = 'karaokeNewest/PREV_PAGE_IDOL_NEWEWST'
-export const REQUEST_IDOL_NEWEWST = 'karaokeNewest/REQUEST_IDOL_NEWEWST'
-export const RECEIVE_IDOL_NEWEWST = 'karaokeNewest/RECEIVE_IDOL_NEWEWST'
-
-export const NEXT_PAGE_IDOL_BEST = 'karaokeBest/NEXT_PAGE_IDOL_BEST'
-export const PREV_PAGE_IDOL_BEST = 'karaokeBest/PREV_PAGE_IDOL_BEST'
-export const REQUEST_IDOL_BEST = 'karaokeBest/REQUEST_IDOL_BEST'
-export const RECEIVE_IDOL_BEST = 'karaokeBest/RECEIVE_IDOL_BEST'

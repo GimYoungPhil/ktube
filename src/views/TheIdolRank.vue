@@ -1,7 +1,17 @@
 <template>
-  <div class="pt-3">
-    <h4>Girl Gruop</h4>
-    <IdolList :collection="girls"/>
+  <div>
+    <div class="py-5">
+      <h4>Girl Gruop</h4>
+      <IdolList :collection="girls" type="Card"/>
+    </div>
+    <div class="py-5">
+      <h4>Boy Gruop</h4>
+      <IdolList :collection="boys" type="Card"/>
+    </div>
+    <div class="py-5">
+      <h4>Artist</h4>
+      <IdolList :collection="idols" type="Item"/>
+    </div>
   </div>
 </template>
 
@@ -16,9 +26,9 @@ export default {
   },
   computed: {
     ...mapState({
-      idols: state => state.idolList.idols,
       girls: state => state.idolList.girls,
       boys: state => state.idolList.boys,
+      idols: state => state.idolList.idols,
     }),
   },
   methods: {
