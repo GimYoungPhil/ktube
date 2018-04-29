@@ -1,7 +1,7 @@
 import API from '@/api'
 import {
-  REQUEST_VIDEO_NEWEWST,
-  RECEIVE_VIDEO_NEWEWST,
+  REQUEST_VIDEO_NEWEST,
+  RECEIVE_VIDEO_NEWEST,
 } from '@/store/mutation-types'
 import { parseVideos } from '@/util/parser'
 
@@ -23,20 +23,20 @@ const getters = {
 }
 
 const mutations = {
-  [REQUEST_VIDEO_NEWEWST] (state) {
+  [REQUEST_VIDEO_NEWEST] (state) {
   },
-  [RECEIVE_VIDEO_NEWEWST] (state, { result }) {
-    const { contents, ...paginations } = result
+  [RECEIVE_VIDEO_NEWEST] (state, { result }) {
+    const { contents, ...pagination } = result
     state.contents = [ ...parseVideos(contents) ]
-    state.pagination = { ...paginations }
+    state.pagination = { ...pagination }
   },
 }
 
 const actions = {
   fetchVideoNewest ({ commit, state }, { page }) {
-    commit(REQUEST_VIDEO_NEWEWST)
+    commit(REQUEST_VIDEO_NEWEST)
     API.getNewestVideos({ page })
-      .then(result => commit(RECEIVE_VIDEO_NEWEWST, { result }))
+      .then(result => commit(RECEIVE_VIDEO_NEWEST, { result }))
   },
 }
 

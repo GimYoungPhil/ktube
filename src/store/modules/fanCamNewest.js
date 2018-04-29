@@ -1,7 +1,7 @@
 import API from '@/api'
 import {
-  REQUEST_FANCAM_NEWEWST,
-  RECEIVE_FANCAM_NEWEWST,
+  REQUEST_FANCAM_NEWEST,
+  RECEIVE_FANCAM_NEWEST,
 } from '@/store/mutation-types'
 import { parseVideos } from '@/util/parser'
 
@@ -23,20 +23,20 @@ const getters = {
 }
 
 const mutations = {
-  [REQUEST_FANCAM_NEWEWST] (state) {
+  [REQUEST_FANCAM_NEWEST] (state) {
   },
-  [RECEIVE_FANCAM_NEWEWST] (state, { result }) {
-    const { contents, ...paginations } = result
+  [RECEIVE_FANCAM_NEWEST] (state, { result }) {
+    const { contents, ...pagination } = result
     state.contents = [ ...parseVideos(contents) ]
-    state.pagination = { ...paginations }
+    state.pagination = { ...pagination }
   },
 }
 
 const actions = {
   fetchFanCamNewest ({ commit, state }, { page }) {
-    commit(REQUEST_FANCAM_NEWEWST)
+    commit(REQUEST_FANCAM_NEWEST)
     API.getNewestFanCams({ page })
-      .then(result => commit(RECEIVE_FANCAM_NEWEWST, { result }))
+      .then(result => commit(RECEIVE_FANCAM_NEWEST, { result }))
   },
 }
 

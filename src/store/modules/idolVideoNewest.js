@@ -1,7 +1,7 @@
 import API from '@/api'
 import {
-  REQUEST_KARAOKE_NEWEST,
-  RECEIVE_KARAOKE_NEWEST,
+  REQUEST_IDOL_VIDEO_NEWEST,
+  RECEIVE_IDOL_VIDEO_NEWEST,
 } from '@/store/mutation-types'
 import { parseVideos } from '@/util/parser'
 
@@ -23,9 +23,9 @@ const getters = {
 }
 
 const mutations = {
-  [REQUEST_KARAOKE_NEWEST] (state) {
+  [REQUEST_IDOL_VIDEO_NEWEST] (state) {
   },
-  [RECEIVE_KARAOKE_NEWEST] (state, { result }) {
+  [RECEIVE_IDOL_VIDEO_NEWEST] (state, { result }) {
     const { contents, ...pagination } = result
     state.contents = [ ...parseVideos(contents) ]
     state.pagination = { ...pagination }
@@ -33,10 +33,10 @@ const mutations = {
 }
 
 const actions = {
-  fetchKaraokeNewest ({ commit, state }, { page }) {
-    commit(REQUEST_KARAOKE_NEWEST)
-    API.getNewestKaraokes({ page })
-      .then(result => commit(RECEIVE_KARAOKE_NEWEST, { result }))
+  fetchIdolVideoNewest ({ commit, state }, { idolKey, page }) {
+    commit(REQUEST_IDOL_VIDEO_NEWEST)
+    API.getIdolsVideoList({ idolKey, page, order: 'time' })
+      .then(result => commit(RECEIVE_IDOL_VIDEO_NEWEST, { result }))
   },
 }
 

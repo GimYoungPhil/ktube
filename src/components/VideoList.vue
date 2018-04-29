@@ -15,7 +15,8 @@
       :endPage="pagination.endPage"
       :hasPrevious="pagination.hasPrevious"
       :hasNext="pagination.hasNext"
-      @selectPage="({ page }) => $emit('selectPage', { page })"
+      @selectPage="({ idolKey, page }) => $emit('selectPage', { idolKey, page })"
+      :idolKey="idolKey"
     />
   </div>
 </template>
@@ -43,6 +44,7 @@ export default {
       type: Object,
       required: true,
     },
+    idolKey: String,
   },
 }
 </script>

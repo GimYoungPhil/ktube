@@ -49,6 +49,7 @@ export default {
     hasPrevious: Boolean,
     hasNext: Boolean,
     page: Number,
+    idolKey: String,
   },
   computed: {
     pageRange: function () {
@@ -57,9 +58,10 @@ export default {
   },
   methods: {
     clickHandler: function ($event) {
+      const idolKey = this.idolKey
       const page = parseInt($event.target.dataset.page, 10)
       if (page !== this.page) {
-        this.$emit('selectPage', { page })
+        this.$emit('selectPage', { idolKey, page })
       }
     },
   },

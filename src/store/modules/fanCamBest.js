@@ -26,9 +26,9 @@ const mutations = {
   [REQUEST_FANCAM_BEST] (state) {
   },
   [RECEIVE_FANCAM_BEST] (state, { result }) {
-    const { contents, ...paginations } = result
+    const { contents, ...pagination } = result
     state.contents = [ ...parseVideos(contents) ]
-    state.pagination = { ...paginations }
+    state.pagination = { ...pagination }
   },
 }
 

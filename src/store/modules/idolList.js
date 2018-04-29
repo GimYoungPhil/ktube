@@ -19,7 +19,6 @@ const mutations = {
   },
   [RECEIVE_IDOL_LIST] (state, { result }) {
     const { idols, girls, boys } = parseIdols(result)
-    // console.log(idols)
     state.idols = [ ...idols ]
     state.girls = [ ...girls ]
     state.boys = [ ...boys ]

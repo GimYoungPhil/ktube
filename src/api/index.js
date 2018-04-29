@@ -3,17 +3,18 @@ import axios from 'axios'
 // const Order = {
 //   latest: 'time',  // 최근 시간순
 //   views: 'view',   // 조회수 많은순
-//   like: 'like'     // 좋아요 많은순
+//   like: 'like',    // 좋아요 많은순
 // };
-const CATEGORY = {
-  daily: 'd',
-  weekly: 'w',
-  monthly: 'm',
-}
+// const CATEGORY = {
+//   daily: 'd',
+//   weekly: 'w',
+//   monthly: 'm',
+// }
+const scale = 12
 
 export default {
   // api: 3
-  getNewestVideos({ page, scale = 12 }) {
+  getNewestVideos({ page }) {
     return axios({
       url: '/api/videos',
       params: { page, scale, 'p[order]': 'time' },
@@ -21,7 +22,7 @@ export default {
   },
 
   // api: 4
-  getBestVideos({ page, scale = 12 }) {
+  getBestVideos({ page }) {
     return axios({
       url: '/api/bests/d',
       params: { page, scale },
@@ -29,7 +30,7 @@ export default {
   },
 
   // api: 5
-  getNewestFanCams({ page, scale = 12 }) {
+  getNewestFanCams({ page }) {
     return axios({
       url: '/api/fancams',
       params: { page, scale, 'p[order]': 'time' },
@@ -37,7 +38,7 @@ export default {
   },
 
   // api: 6
-  getBestFanCams({ page, scale = 12 }) {
+  getBestFanCams({ page }) {
     return axios({
       url: '/api/fbests/d',
       params: { page, scale },
@@ -45,7 +46,7 @@ export default {
   },
 
   // api: 9
-  getNewestKaraokes({ page, scale = 12 }) {
+  getNewestKaraokes({ page }) {
     return axios({
       url: '/api/karaokes',
       params: { page, scale, 'p[order]': 'time' },
@@ -53,7 +54,7 @@ export default {
   },
 
   // api: 10
-  getBestKaraokes({ page, scale = 12 }) {
+  getBestKaraokes({ page }) {
     return axios({
       url: '/api/karabests/d',
       params: { page, scale },
@@ -77,7 +78,7 @@ export default {
   },
 
   // api: 14
-  getIdolsImage({ idolKey, page, scale = 12 }) {
+  getIdolsImage({ idolKey, page }) {
     return axios({
       url: `/api/images/${idolKey}`,
       params: { page }
@@ -85,19 +86,18 @@ export default {
   },
 
   // api: 11
-  getIdolsVideoList({ idolKey, page, order = 'view', scale = 12 }) {
+  getIdolsVideoList({ idolKey, page, order = 'view' }) {
     return axios({
       url: `/api/videos/${idolKey}`,
-      params: { page, 'p[order]': order, scale },
+      params: { page, scale, 'p[order]': order },
     }).then(response => response.data)
   },
 
   // api: 12
-  getIdolsKaraokeList({ idolKey, page, order = 'view', scale = 12 }) {
+  getIdolsKaraokeList({ idolKey, page, order = 'view' }) {
     return axios({
       url: `/api/karaokes/${idolKey}`,
-      params: { page, 'p[order]': order, scale },
+      params: { page, scale, 'p[order]': order },
     }).then(response => response.data)
   },
-
 }

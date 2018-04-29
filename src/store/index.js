@@ -7,8 +7,8 @@ import fanCamBest from './modules/fanCamBest'
 import karaokeNewest from './modules/karaokeNewest'
 import karaokeBest from './modules/karaokeBest'
 import idolList from './modules/idolList'
-import idolNewest from './modules/idolNewest'
-import idolBest from './modules/idolBest'
+import idolVideoNewest from './modules/idolVideoNewest'
+import idolVideoBest from './modules/idolVideoBest'
 
 Vue.use(Vuex)
 
@@ -21,8 +21,8 @@ export default new Vuex.Store({
     karaokeNewest,
     karaokeBest,
     idolList,
-    idolNewest,
-    idolBest,
+    idolVideoNewest,
+    idolVideoBest,
   },
   strict: process.env.NODE_ENV !== 'production',
 })

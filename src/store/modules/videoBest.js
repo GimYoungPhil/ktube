@@ -26,9 +26,9 @@ const mutations = {
   [REQUEST_VIDEO_BEST] (state) {
   },
   [RECEIVE_VIDEO_BEST] (state, { result }) {
-    const { contents, ...paginations } = result
+    const { contents, ...pagination } = result
     state.contents = [ ...parseVideos(contents) ]
-    state.pagination = { ...paginations }
+    state.pagination = { ...pagination }
   },
 }
 
