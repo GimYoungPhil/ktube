@@ -6,6 +6,7 @@ import fanCamNewest from './modules/fanCamNewest'
 import fanCamBest from './modules/fanCamBest'
 import karaokeNewest from './modules/karaokeNewest'
 import karaokeBest from './modules/karaokeBest'
+import idolList from './modules/idolList'
 import idolNewest from './modules/idolNewest'
 import idolBest from './modules/idolBest'
 
@@ -19,6 +20,7 @@ export default new Vuex.Store({
     fanCamBest,
     karaokeNewest,
     karaokeBest,
+    idolList,
     idolNewest,
     idolBest,
   },

@@ -1,4 +1,6 @@
+import _ from 'underscore'
 import moment from 'moment'
+import girlgroup from './girlgroup.json'
 
 export function displayDuration(duration) {
   let h
@@ -50,4 +52,21 @@ export function parseVideos(videos) {
 
     return video
   })
+}
+
+export function parseIdols(idols) {
+  const girls = []
+  const boys = []
+
+  girlgroup.forEach(girl => {
+    idols.forEach((idol, index) => {
+      if (idol.name1 === girl.name) {
+        girls.push({ ...idol })
+        idols.splice(index, 1)
+        return
+      }
+    })
+  })
+
+  return { idols, girls, boys }
 }

@@ -35,12 +35,12 @@ export default {
       type: Array,
       required: true,
     },
-    pagination: {
-      type: Object,
-      required: true,
-    },
     queryType: {
       type: String,
+      required: true,
+    },
+    pagination: {
+      type: Object,
       required: true,
     },
   },

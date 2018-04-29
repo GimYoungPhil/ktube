@@ -18,8 +18,8 @@
           <li class="nav-item" :class="{ active: $route.name === 'karaoke'}">
             <router-link class="nav-link" :to="{name: 'karaoke'}">Karaoke</router-link>
           </li>
-          <li class="nav-item" :class="{ active: $route.name === 'idol'}">
-            <router-link class="nav-link" :to="{name: 'idol'}">Idols</router-link>
+          <li class="nav-item" :class="{ active: $route.name === 'idolRank'}">
+            <router-link class="nav-link" :to="{name: 'idolRank'}">Idols</router-link>
           </li>
         </ul>
       </div>

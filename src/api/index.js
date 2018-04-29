@@ -12,41 +12,6 @@ const CATEGORY = {
 }
 
 export default {
-  getIdolList(lang = 'ja') {
-    return axios({
-      url: '/api/idols',
-      params: { lang },
-    }).then(response => response.data)
-  },
-
-  getIdolDetail({ idolKey, lang = 'en' }) {
-    return axios({
-      url: `/api/idols/${idolKey}`,
-      params: { lang },
-    }).then(response => response.data)
-  },
-
-  getIdolImageList({ idolKey, page = 1 }) {
-    return axios({
-      url: `/api/images/${idolKey}`,
-      params: { page },
-    }).then(response => response.data)
-  },
-
-  getIdolVideoList({ idolKey, page = 1, order = 'view' }) {
-    return axios({
-      url: `/api/videos/${idolKey}`,
-      params: { page, 'p[order]': order },
-    }).then(response => response.data)
-  },
-
-  getIdolKaraokeList({ idolKey, page = 1, order = 'view' }) {
-    return axios({
-      url: `/api/karaokes/${idolKey}`,
-      params: { page, 'p[order]': order },
-    }).then(response => response.data)
-  },
-
   // api: 3
   getNewestVideos({ page, scale = 12 }) {
     return axios({
@@ -94,4 +59,45 @@ export default {
       params: { page, scale },
     }).then(response => response.data)
   },
+
+  // api: 15
+  getIdols({ lang = 'ko' }) {
+    return axios({
+      url: '/api/idols',
+      params: { lang },
+    }).then(response => response.data)
+  },
+
+  // api: 16
+  getIdolsDetail({ idolKey, lang = 'ko'}) {
+    return axios({
+      url: `/api/idols/${idolKey}`,
+      params: { lang },
+    }).then(response => response.data)
+  },
+
+  // api: 14
+  getIdolsImage({ idolKey, page, scale = 12 }) {
+    return axios({
+      url: `/api/images/${idolKey}`,
+      params: { page }
+    }).then(response => response.data) 
+  },
+
+  // api: 11
+  getIdolsVideoList({ idolKey, page, order = 'view', scale = 12 }) {
+    return axios({
+      url: `/api/videos/${idolKey}`,
+      params: { page, 'p[order]': order, scale },
+    }).then(response => response.data)
+  },
+
+  // api: 12
+  getIdolsKaraokeList({ idolKey, page, order = 'view', scale = 12 }) {
+    return axios({
+      url: `/api/karaokes/${idolKey}`,
+      params: { page, 'p[order]': order, scale },
+    }).then(response => response.data)
+  },
+
 }

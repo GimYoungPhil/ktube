@@ -1,12 +1,12 @@
 <template>
   <div>
-    IdolView
+    TheIdolVideo
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IdolView',
+  name: 'TheIdolVideo',
 }
 </script>
 
