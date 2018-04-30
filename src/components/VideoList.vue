@@ -6,7 +6,7 @@
         v-for="(video, index) in collection"
         :key="index"
       >
-        <VideoListCard :video="video" :queryType="queryType"/>
+        <VideoListCard :video="video" :queryType="queryType" :idolKey="idolKey"/>
       </div>
     </transition-group>
     <VideoListPagination

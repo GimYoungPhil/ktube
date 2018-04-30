@@ -3,7 +3,7 @@
     :to="{
       name: 'watch',
       params: { videoKey: video.videoKey },
-      query: { type: queryType }
+      query: { type: queryType, idolKey }
     }"
   >
     <div class="card border-0 rounded-0">
@@ -36,6 +36,7 @@ export default {
       type: String,
       required: true,
     },
+    idolKey: String,
   },
 }
 </script>
