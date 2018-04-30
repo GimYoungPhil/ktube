@@ -42,5 +42,10 @@ export default {
       this.requestData({ idolKey: this.idolKey, page: 1 })
     }
   },
+  // watch: {
+  //   idolKey: function() {
+  //     (this.idolKey)
+  //   },
+  // },
 }
 </script>
