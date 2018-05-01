@@ -1,12 +1,13 @@
 <template>
-  <div class="">
-    <WatchVideo
-      :videoKey="$route.params.videoKey"
-    />
-    <component
-      :is="$route.query.type"
-      :idolKey="$route.query.idolKey"
-    />
+  <div>
+    <div class="jumbotron jumbotron-fluid p-0 bg-black">
+      <div class="container">
+        <WatchVideo/>
+      </div>
+    </div>
+    <div class="container">
+      <component :is="$route.query.type"/>
+    </div>
   </div>
 </template>
 
@@ -43,3 +44,9 @@ export default {
   // },
 }
 </script>
+
+<style scoped>
+.bg-black {
+  background-color: #000;
+}
+</style>

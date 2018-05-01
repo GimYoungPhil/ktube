@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="py-5">
       <h4>Girl Gruop</h4>
       <IdolList :collection="girls" type="Card"/>

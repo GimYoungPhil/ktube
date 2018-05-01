@@ -100,4 +100,11 @@ export default {
       params: { page, scale, 'p[order]': order },
     }).then(response => response.data)
   },
+
+  // api: 1
+  getVideoWatch({ videoKey }) {
+    return axios({
+      url: `/api/video/${videoKey}`,
+    }).then(response => response.data)
+  }
 }

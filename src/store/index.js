@@ -9,6 +9,7 @@ import karaokeBest from './modules/karaokeBest'
 import idolList from './modules/idolList'
 import idolVideoNewest from './modules/idolVideoNewest'
 import idolVideoBest from './modules/idolVideoBest'
+import videoWatch from './modules/videoWatch'
 
 Vue.use(Vuex)
 
@@ -23,6 +24,7 @@ export default new Vuex.Store({
     idolList,
     idolVideoNewest,
     idolVideoBest,
+    videoWatch,
   },
   strict: process.env.NODE_ENV !== 'production',
 })

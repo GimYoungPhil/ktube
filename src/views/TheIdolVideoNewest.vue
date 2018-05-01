@@ -6,7 +6,7 @@
       :collection="collection"
       :pagination="pagination"
       @selectPage="requestData"
-      :idolKey="idolKey"
+      :idolKey="$route.params.idolKey || $route.query.idolKey"
     />
   </div>
 </template>
@@ -19,12 +19,6 @@ export default {
   name: 'TheIdolVideoNewest',
   components: {
     VideoList,
-  },
-  props: {
-    idolKey: {
-      type: String,
-      required: true,
-    },
   },
   computed: {
     ...mapState({
@@ -39,7 +33,8 @@ export default {
   },
   mounted() {
     if (!this.collection.length) {
-      this.requestData({ idolKey: this.idolKey, page: 1 })
+      const idolKey = this.$route.params.idolKey || this.$route.query.idolKey
+      this.requestData({ idolKey, page: 1 })
     }
   },
 }

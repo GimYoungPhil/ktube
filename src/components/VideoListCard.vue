@@ -2,7 +2,7 @@
   <router-link
     :to="{
       name: 'watch',
-      params: { videoKey: video.videoKey },
+      params: { videoId: video.videoId },
       query: { type: queryType, idolKey }
     }"
   >

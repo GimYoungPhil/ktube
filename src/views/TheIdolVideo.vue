@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <TheIdolVideoNewest :idolKey="$route.params.idolKey"/>
-    <TheIdolVideoBest :idolKey="$route.params.idolKey"/>
+  <div class="container">
+    <TheIdolVideoNewest/>
+    <TheIdolVideoBest/>
   </div>
 </template>
 
