@@ -6,6 +6,7 @@ import {
 import { parseVideos } from '@/util/parser'
 
 const state = {
+  idolKey: null,
   contents: [],
   pagination: {
     page: 1,
@@ -25,10 +26,11 @@ const getters = {
 const mutations = {
   [REQUEST_IDOL_VIDEO_NEWEST] (state) {
   },
-  [RECEIVE_IDOL_VIDEO_NEWEST] (state, { result }) {
+  [RECEIVE_IDOL_VIDEO_NEWEST] (state, { result, idolKey }) {
     const { contents, ...pagination } = result
     state.contents = [ ...parseVideos(contents) ]
     state.pagination = { ...pagination }
+    state.idolKey = idolKey
   },
 }
 
@@ -36,7 +38,7 @@ const actions = {
   fetchIdolVideoNewest ({ commit, state }, { idolKey, page }) {
     commit(REQUEST_IDOL_VIDEO_NEWEST)
     API.getIdolsVideoList({ idolKey, page, order: 'time' })
-      .then(result => commit(RECEIVE_IDOL_VIDEO_NEWEST, { result }))
+      .then(result => commit(RECEIVE_IDOL_VIDEO_NEWEST, { result, idolKey }))
   },
 }
 
