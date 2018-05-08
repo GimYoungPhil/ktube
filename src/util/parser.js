@@ -62,7 +62,7 @@ export function parseIdols(idols) {
   girlgroup.forEach(girl => {
     idols.forEach((idol, index) => {
       if (idol.name2 === girl.name) {
-        girls.push({ ...idol })
+        girls.push({ ...idol, image: girl.image })
         idols.splice(index, 1)
         return
       }
