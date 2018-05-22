@@ -7,7 +7,7 @@
           :data-page="startPage - 1"
           @click="clickHandler"
         >
-          Previous
+          <font-awesome-icon :icon="iconLeft" />
         </span>
       </li>
       <template v-for="n in pageRange">
@@ -31,7 +31,7 @@
           :data-page="endPage + 1"
           @click="clickHandler"
         >
-          Next
+          <font-awesome-icon :icon="iconRight" />
         </span>
       </li>
     </ul>
@@ -39,10 +39,15 @@
 </template>
 
 <script>
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { faChevronLeft, faChevronRight, faAngleLeft, faAngleRight } from '@fortawesome/fontawesome-free-solid'
 import _ from 'underscore'
 
 export default {
   name: 'VideoListPagination',
+  components: {
+    FontAwesomeIcon,
+  },
   props: {
     startPage: Number,
     endPage: Number,
@@ -52,6 +57,12 @@ export default {
     idolKey: String,
   },
   computed: {
+    iconLeft: function () {
+      return faChevronLeft
+    },
+    iconRight: function () {
+      return faChevronRight
+    },
     pageRange: function () {
       return _.range(this.startPage, this.endPage + 1)
     },
