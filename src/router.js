@@ -11,7 +11,8 @@ Vue.use(Router)
 
 const router = new Router({
   routes: [
-    { path: '/',               name: 'video',     component: TheVideo },
+    { path: '/',               redirect: { name: 'video' } },
+    { path: '/video',          name: 'video',     component: TheVideo },
     { path: '/fancam',         name: 'fancam',    component: TheFanCam },
     { path: '/karaoke',        name: 'karaoke',   component: TheKaraoke },
     { path: '/idols/',         name: 'idolRank',  component: TheIdolRank },
