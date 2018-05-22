@@ -1,6 +1,6 @@
 <template>
   <div class="pt-3">
-    <h4>Newest Vidoes</h4>
+    <h4>Newest Videos</h4>
     <VideoList
       queryType="idolVideoNewest"
       :collection="collection"

@@ -1,6 +1,6 @@
 <template>
   <div class="pt-3">
-    <h4>FanCam : Newest Vidoes</h4>
+    <h4>FanCam : Newest Videos</h4>
     <VideoList
       queryType="fanCamNewest"
       :collection="collection"

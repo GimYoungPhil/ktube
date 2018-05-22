@@ -1,6 +1,6 @@
 <template>
   <div class="pt-3">
-    <h4>Karaoke : Best Vidoes</h4>
+    <h4>Karaoke : Best Videos</h4>
     <VideoList
       queryType="karaokeBest"
       :collection="collection"
