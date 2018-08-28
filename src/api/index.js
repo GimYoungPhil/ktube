@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// axios.defaults.baseURL = 'https://api.ktube.xyz'
 // const Order = {
 //   latest: 'time',  // 최근 시간순
 //   views: 'view',   // 조회수 많은순
